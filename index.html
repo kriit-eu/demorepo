@@ -1,9 +1,20 @@
+<!--  määrab veebilehitsejale, millist HTML versiooni dokument kasutab -->
 <!DOCTYPE html>
+<!--  määrab veebilehitsejale, mis keeles leht on kirjutatud -->
 <html lang="en">
+
+<!--  sisaldab metaandmeid ja muid sätteid, mis aitavad veebilehel korralikult töötada, kuid see osa ei ole kasutajale otse nähtav -->
 <head>
+    <!-- näitab brauserile, et kasutada tuleb UTF-8 kooditabelit. -->
     <meta charset="UTF-8">
+
+    <!--  ilma selle metaandmeta võivad mobiilseadmed veebilehti kuvada vähendatud suuruses, mistõttu tekib vajadus käsitsi suumida ja kerida.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  määrab lehe pealkirja, mida kasutaja näeb brauseri tabis -->
     <title>Business Management Solutions</title>
+
+    <!--  sisaldab CSS stiile, mis määrab lehe välimuse -->
     <style>
         fieldset {
             display: flex;
@@ -15,12 +26,21 @@
             gap: 2rem;
         }
     </style>
+
 </head>
+
+<!-- body element sisaldab kogu veebilehe sisu, mida kasutaja näeb -->
 <body>
+    
+    <!-- header on üldine konteiner lehe päise jaoks -->
     <header>
+        <!-- nav element määratleb navigatsioonilinke sisaldava ala -->
         <nav>
+            <!-- ul loob järjestamata nimekirja -->
             <ul>
-                <li><a href="#home">Home</a></li>
+                <!-- li määratleb nimekirja elemendi -->
+                <li><!-- a element loob hüperlingi -->
+                    <a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -28,35 +48,56 @@
         </nav>
     </header>
 
+    <!-- main element tähistab lehe põhisisu -->
     <main>
+        <!-- section element grupeerib temaatiliselt seotud sisu -->
         <section id="home">
+            <!-- h1 on kõige kõrgema taseme pealkiri -->
             <h1>Welcome to Business Excellence</h1>
+            <!-- p element määratleb tekstilõigu -->
+            <!-- strong element näitab tugevalt rõhutatud teksti -->
+            <!-- em element näitab rõhutatud teksti -->
             <p><strong>Transform</strong> your business with our <em>innovative</em> solutions.</p>
+            <!-- hr loob horisontaalse joone -->
             <hr>
         </section>
 
+        <!-- section element eraldab dokumendi eraldi sisulise osa -->
         <section id="services">
+            <!-- h2 on teise taseme pealkiri -->
             <h2>Our Services</h2>
+            <!-- div on üldotstarbeline konteiner elementide grupeerimiseks -->
             <div class="service-grid">
+                <!-- article element tähistab iseseisvat, terviklikku sisuüksust -->
                 <article>
+                    <!-- h3 on kolmanda taseme pealkiri -->
                     <h3>Strategic Planning</h3>
+                    <!-- img element lisab pildifaili, alt atribuut pakub tekstilist alternatiivi -->
                     <img src="/api/placeholder/300/200" alt="Strategic Planning Illustration" width="300" height="200">
+                    <!-- p element määratleb tekstilõigu -->
                     <p>Develop comprehensive business strategies.</p>
                 </article>
 
                 <article>
                     <h3>Financial Management</h3>
+                    <!-- table element loob tabeli struktuuri -->
                     <table>
+                        <!-- caption element määrab tabeli pealkirja -->
                         <caption>Service Pricing</caption>
+                        <!-- thead grupeerib tabeli päise elemendid -->
                         <thead>
+                            <!-- tr määrab tabeli rea -->
                             <tr>
+                                <!-- th määrab tabeli päise lahtri -->
                                 <th scope="col">Service</th>
                                 <th scope="col">Basic</th>
                                 <th scope="col">Premium</th>
                             </tr>
                         </thead>
+                        <!-- tbody grupeerib tabeli põhiosa elemendid -->
                         <tbody>
                             <tr>
+                                <!-- td määrab tabeli tavalise lahtri -->
                                 <td>Consulting</td>
                                 <td data-price="basic">$500</td>
                                 <td data-price="premium">$1000</td>
@@ -69,17 +110,23 @@
 
         <section id="about">
             <h2>About Us</h2>
+            <!-- blockquote element tähistab pikemat tsitaati -->
             <blockquote>
                 <p>"Leadership and learning are indispensable to each other."</p>
+                <!-- footer element sisaldab sektsiooni või artikli lõpuinfot -->
                 <footer>
+                    <!-- cite element tähistab teose või autori viidet -->
                     <cite>- John F. Kennedy</cite>
                 </footer>
             </blockquote>
 
             <div class="team">
                 <h3>Our Team</h3>
+                <!-- dl loob kirjelduste nimekirja -->
                 <dl>
+                    <!-- dt määrab kirjeldatava termini -->
                     <dt>CEO</dt>
+                    <!-- dd määrab termini kirjelduse -->
                     <dd>Jane Smith - Business Strategy Expert</dd>
                     <dt>CFO</dt>
                     <dd>John Doe - Financial Analyst</dd>
@@ -89,23 +136,31 @@
 
         <section id="contact">
             <h2>Contact Us</h2>
+            <!-- form element loob vormi andmete sisestamiseks -->
             <form id="contactForm" action="/submit" method="POST">
+                <!-- fieldset grupeerib vormis seotud elemendid -->
                 <fieldset>
+                    <!-- legend määrab fieldset elemendi pealkirja -->
                     <legend>Contact Information</legend>
 
                     <div>
+                        <!-- label element määrab vormivälja sildi -->
                         <label for="name">Name:</label>
+                        <!-- input element loob andmete sisestusvälja -->
                         <input type="text" id="name" name="name" required>
                     </div>
 
                     <div>
                         <label for="email">Email:</label>
+                        <!-- input type="email" loob e-posti aadressi sisestusvälja -->
                         <input type="email" id="email" name="email" required>
                     </div>
 
                     <div>
                         <label for="service">Service Interest:</label>
+                        <!-- select element loob rippmenüü -->
                         <select id="service" name="service">
+                            <!-- option element määrab valikuvariandi rippmenüüs -->
                             <option value="">Select a service</option>
                             <option value="consulting">Consulting</option>
                             <option value="planning">Strategic Planning</option>
@@ -115,52 +170,76 @@
 
                     <div>
                         <label for="message">Message:</label>
+                        <!-- textarea loob mitmerealise tekstisisestusvälja -->
                         <textarea id="message" name="message" rows="4"></textarea>
                     </div>
 
+                    <!-- button element loob klõpsatava nupu -->
                     <button type="submit">Send Message</button>
                 </fieldset>
             </form>
         </section>
     </main>
 
+    <!-- footer element määrab lehe jaluse ala -->
     <footer>
+        <!-- small element tähistab väiksemat või vähem tähtsat teksti -->
         <small>© <span id="copyright-year">2024</span> Business Management Solutions. All rights reserved.</small>
+        <!-- address element tähistab kontaktandmeid -->
         <address>
+            <!-- br element loob reavahetuse -->
             123 Business Avenue<br>
             Corporate District<br>
             Email: <a href="mailto:info@business.com">info@business.com</a>
         </address>
     </footer>
 
+    <!-- script element sisaldab või viitab JavaScript koodile -->
     <script>
+        // Leiab HTML elemendi ID 'contactForm' järgi ja salvestab selle muutujasse
         const form = document.getElementById('contactForm');
+        // Leiab HTML elemendi ID 'service' järgi ja salvestab selle muutujasse
         const serviceSelect = document.getElementById('service');
+        // Leiab kõik HTML elemendid, millel on data-price atribuut
         const priceElements = document.querySelectorAll('[data-price]');
+        // Leiab HTML elemendi ID 'copyright-year' järgi ja salvestab selle muutujasse
         const copyrightYear = document.getElementById('copyright-year');
 
+        // Funktsioon, mis tõstab esile hinnad, kui valitud on konsultatsioon
         function highlightPrices() {
+            // Käib läbi kõik hinnaelementid ja muudab nende taustavärvi
             priceElements.forEach(price => {
+                // Kui valitud on 'consulting', määrab kollase tausta, muidu eemaldab tausta
                 price.style.backgroundColor = serviceSelect.value === 'consulting' ? '#ffeb3b' : '';
             });
         }
 
+        // Funktsioon, mis käsitleb vormi esitamist
         function handleSubmit(event) {
+            // Takistab vormi tavapärast esitamist
             event.preventDefault();
 
+            // Loob vormist FormData objekti
             const formData = new FormData(form);
+            // Loob tänusõnumi alguse
             let message = 'Thank you for your submission!\n\nDetails:\n';
 
+            // Käib läbi kõik vormi väljad ja lisab need sõnumisse
             formData.forEach((value, key) => {
+                // Lisab iga välja nime ja väärtuse sõnumisse
                 message += `${key}: ${value}\n`;
             });
 
+            // Kuvab tänusõnumi kasutajale
             alert(message);
         }
 
+        // Lisab sündmuse kuulaja teenuse valiku muutmiseks
         serviceSelect.addEventListener('change', highlightPrices);
+        // Lisab sündmuse kuulaja vormi esitamiseks
         form.addEventListener('submit', handleSubmit);
 
+        // Määrab autoriõiguse aastaks praeguse aasta
         copyrightYear.textContent = new Date().getFullYear();
     </script>
 </body>
